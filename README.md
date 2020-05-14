@@ -1,7 +1,7 @@
 # poll_system_api
 It is a poll system API based on graphql and Django
 
-##Installation:
+## Installation:
 $cd Polls
 $pip3 install pipenv
 $pipenv shell
