@@ -1,4 +1,4 @@
-# poll_system_api
+# Poll-API-D
 It is a poll system API based on graphql and Django
 
 ## Installation:
