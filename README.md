@@ -18,10 +18,13 @@ $python manage.py runserver
 
 ## QUERY SYNTAX
 
+```python
 mutation createArea {
-  createArea(input: {name: "Sonari",winningParty:"None",oppositionParty:"None",winner:"None",opposition:"None"}) {
+  createArea(input: {name: "Sonari",winningParty:"None",oppositionParty:"None",winner:"None",opposition:"None"}) 
+  {
     ok
-    area {
+    area
+    {
       id
       name
       winner
@@ -34,7 +37,8 @@ mutation createArea {
 mutation deleteArea {
   deleteArea(id:2) {
     ok
-    area {
+    area 
+    {
       id
       name
       winningParty
@@ -44,9 +48,11 @@ mutation deleteArea {
 }
 
 mutation updateArea {
-  updateArea(id:1,input: {name: "Anari",winningParty:"None",oppositionParty:"None",winner:"None",opposition:"None"}) {
+  updateArea(id:1,input: {name: "Anari",winningParty:"None",oppositionParty:"None",winner:"None",opposition:"None"}) 
+  {
     ok
-    area {
+    area
+    {
       id
       name
       winner
@@ -57,9 +63,11 @@ mutation updateArea {
 }
 
 mutation pollArea {
-  pollArea(id:1,input: {name: "Sonari"}) {
+  pollArea(id:1,input: {name: "Sonari"}) 
+  {
     ok
-   area {
+   area
+   {
       id
       name
       winningParty
@@ -70,8 +78,10 @@ mutation pollArea {
   }
 }
 
-mutation createVoter {
-  createVoter(input: {name: "Prithwiraj", partyPrefered: "Congress", place: "Sonari", age: 24}) {
+mutation createVoter 
+{
+  createVoter(input: {name: "Prithwiraj", partyPrefered: "Congress", place: "Sonari", age: 24}) 
+  {
     ok
    voter {
       id
@@ -83,10 +93,13 @@ mutation createVoter {
   }
 }
 
-mutation updateVoter {
-  updateVoter(id:5,input: {name: "Prithwiraj", partyPrefered: "Congress", place: "Sonari", age: 24}) {
+mutation updateVoter
+{
+  updateVoter(id:5,input: {name: "Prithwiraj", partyPrefered: "Congress", place: "Sonari", age: 24})
+  {
     ok
-   voter {
+   voter 
+   {
       id
       name
       partyPrefered
@@ -96,10 +109,13 @@ mutation updateVoter {
   }
 }
 
-mutation deleteVoter {
-  deleteVoter(id:4) {
+mutation deleteVoter 
+{
+  deleteVoter(id:4)
+  {
     ok
-    voter {
+    voter 
+    {
       id
       name
       partyPrefered
@@ -109,10 +125,13 @@ mutation deleteVoter {
 }
 
 
-mutation castVoter {
-  castVoter(id:4,input: {name: "Prithwiraj", partyPrefered: "Congress", place: "Sonari", age: 22}) {
+mutation castVoter
+{
+  castVoter(id:4,input: {name: "Prithwiraj", partyPrefered: "Congress", place: "Sonari", age: 22}) 
+  {
     ok
-   voter {
+   voter
+   {
       id
       name
       partyPrefered
@@ -122,10 +141,13 @@ mutation castVoter {
   }
 }
 
-mutation createCandidate {
-  createCandidate(input: {name: "Prithwi", party: "Congress", place: "Sonari", age: 27,votes:0}) {
+mutation createCandidate 
+{
+  createCandidate(input: {name: "Prithwi", party: "Congress", place: "Sonari", age: 27,votes:0})
+  {
     ok
-   candidate {
+   candidate
+   {
       id
       name
       party
@@ -135,10 +157,13 @@ mutation createCandidate {
   }
 }
 
-mutation updateCandidate {
-  updateCandidate(id:2,input: {name: "Prithwi", party: "Congress", place: "Sonari", age: 27,votes:0}) {
+mutation updateCandidate
+{
+  updateCandidate(id:2,input: {name: "Prithwi", party: "Congress", place: "Sonari", age: 27,votes:0}) 
+  {
     ok
-   candidate {
+   candidate 
+   {
       id
       name
       party
@@ -148,10 +173,13 @@ mutation updateCandidate {
   }
 }
 
-mutation deleteCandidate {
-  deleteCandidate(id:2) {
+mutation deleteCandidate 
+{
+  deleteCandidate(id:2)
+  {
     ok
-    candidate {
+    candidate
+    {
       id
       name
       party
@@ -160,6 +188,7 @@ mutation deleteCandidate {
     }
   }
 }
+```
 
 ## Status
 Repository status([badge](https://img.shields.io/badge/)):
